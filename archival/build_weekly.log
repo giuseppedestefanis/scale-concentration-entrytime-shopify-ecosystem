@@ -1,0 +1,30 @@
+Loading installs...
+  997,713 install rows (7,708 apps)
+Loading vendor metadata...
+  130,268 metadata rows
+Loading main_categories and pivoting to primary + secondary...
+  134,970 (app × snapshot) category rows
+Loading pricing and pivoting to plan_1..plan_5 prices...
+  129,757 (app × snapshot) pricing rows
+Joining via merge_asof (backward, by app_handle)...
+  997,713 (app × week) rows joined
+Writing SQLite table weekly_dataset...
+Writing CSV to ~/scraper/csv/weekly_dataset.csv...
+  CSV: 260.1 MB
+
+=== weekly_dataset summary ===
+  rows:            997,713
+  apps:            7,708
+  weeks span:      2019-02-18 → 2026-03-01
+  with vendor:     926,019 (92.8%)
+  with category_1: 917,986 (92.0%)
+  with category_2: 452,285 (45.3%)
+  with pricing:    923,574 (92.6%)
+  has free plan:   515,613 rows
+
+Plan slot fill rate:
+  plan_1_price:   923,574 ( 92.6%)
+  plan_2_price:   475,288 ( 47.6%)
+  plan_3_price:   371,000 ( 37.2%)
+  plan_4_price:   211,027 ( 21.2%)
+  plan_5_price:    40,484 (  4.1%)
